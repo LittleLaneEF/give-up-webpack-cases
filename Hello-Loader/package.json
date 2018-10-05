@@ -1,0 +1,27 @@
+{
+  "name": "hello-webpack",
+  "version": "0.0.1",
+  "description": "hello-webpack",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LittleLaneEF/give-up-webpack-cases.git"
+  },
+  "keywords": [
+    "webpack"
+  ],
+  "author": "littleLane",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/LittleLaneEF/give-up-webpack-cases/issues"
+  },
+  "homepage": "https://github.com/LittleLaneEF/give-up-webpack-cases#readme",
+  "devDependencies": {
+    "css-loader": "^1.0.0",
+    "style-loader": "^0.23.0",
+    "webpack": "^4.20.2"
+  }
+}
