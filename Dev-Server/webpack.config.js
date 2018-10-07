@@ -19,7 +19,7 @@ module.exports = {
         // 注意这里 loader 配置的顺序，样式文件依次从右到左经过 use 配置 loader 的处理
         // css-loader 是解析样式文件
         // style-loader 是将解析后的样式渲染在页面上
-        use: ExtractTextWebpackPlugin.extract({
+        use: NODE_ENV === 'development' ? ['style-loader', 'css-loader'] : ExtractTextWebpackPlugin.extract({
           fallback: 'style-loader',
           use: ['css-loader']
         }),
