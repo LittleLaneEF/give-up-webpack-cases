@@ -1,3 +1,3 @@
 import './style/index.css';
 
-document.querySelector('#app').innerHTML = 'Hello Plugin!'; 
+document.querySelector('#app').innerHTML = 'Hello Plugin1!'; 

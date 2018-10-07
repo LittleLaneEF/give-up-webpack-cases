@@ -1,10 +1,11 @@
 const path = require('path');
 const ExtractTextWebpackPlugin = require('extract-text-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
 module.exports = {
   entry: './src',
   output: {
     path: path.resolve(__dirname, './dist'),
-    publicPath: "/dist/",
   },
   module: {
     rules: [
@@ -23,6 +24,10 @@ module.exports = {
   },
   plugins: [
     new ExtractTextWebpackPlugin('index.css'),
+    new HtmlWebpackPlugin({
+      // 要进行打包的 html 模板文件
+      template: 'index.html',
+    }),
   ],
   devServer: {},
   mode: process.env.NODE_ENV,
