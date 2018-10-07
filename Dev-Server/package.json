@@ -1,10 +1,10 @@
 {
   "name": "hello-webpack",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "hello-webpack",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server",
+    "start": "cross-env NODE_ENV=development webpack-dev-server",
     "build": "webpack --mode development",
     "build:Pro": "cross-env NODE_ENV=production webpack",
     "build:Dev": "cross-env NODE_ENV=development webpack"

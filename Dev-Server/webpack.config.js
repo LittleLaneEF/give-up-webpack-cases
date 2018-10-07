@@ -1,7 +1,10 @@
 const path = require('path');
+const Webpack = require('webpack');
 const ExtractTextWebpackPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+
+const { NODE_ENV } = process.env;
 
 module.exports = {
   entry: './src',
@@ -30,7 +33,10 @@ module.exports = {
       // 要进行打包的 html 模板文件
       template: 'index.html',
     }),
+    new Webpack.HotModuleReplacementPlugin(),
   ],
-  devServer: {},
-  mode: process.env.NODE_ENV,
+  devServer: {
+    hot: true,
+  },
+  mode: NODE_ENV,
 }
